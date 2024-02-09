@@ -1,7 +1,14 @@
 # devops-fully-automated-infra
+
 Fully automated and secured Terraform infra pipeline
 
 Testing teh webhook.....
+Prerequisite
+1. AWS CLI
+2. Install Terraform
+3. AWS Account
+4. AWS user with Admin permissions
+5. Preferred IDE (VSCode or Pycharm)
 
 ## CICD Infra setup
 1) ###### GitHub setup
