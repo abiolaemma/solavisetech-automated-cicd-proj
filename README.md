@@ -4,7 +4,7 @@ Fully automated and secured Terraform infra pipeline.
 
 Testing the webhook.....
 
-Prerequisite
+Prerequisites
 1. AWS CLI
 2. Install Terraform
 3. AWS Account
