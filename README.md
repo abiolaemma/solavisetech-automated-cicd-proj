@@ -1,4 +1,4 @@
-# devops-fully-automated-infra
+# solavisetech-automated-cicd-proj
 
 Fully automated and secured Terraform infra pipeline.
 
@@ -13,10 +13,10 @@ Prerequisites
 
 ## CICD Infra setup
 1) ###### GitHub setup
-    Fork GitHub Repository by using the existing repo "devops-fully-automated-infra" (https://github.com/cvamsikrishna11/devops-fully-automated-infra)     
+    Fork GitHub Repository by using the existing repo "solavisetech-automated-cicd-proj" (https://github.com/abiolaemma/solavisetech-automated-cicd-proj)     
     - Go to GitHub (github.com)
     - Login to your GitHub Account
-    - **Fork repository "devops-fully-automated-infra" (https://github.com/cvamsikrishna11/devops-fully-automated-infra.git) & name it "devops-fully-automated-infra"**
+    - **Fork repository "solavisetech-automated-cicd-proj" (https://github.com/abiolaemma/solavisetech-automated-cicd-proj.git) & name it "solavisetech-automated-cicd-proj"**
     - Clone your newly created repo to your local
 
 2) ###### Jenkins
@@ -30,8 +30,8 @@ Prerequisites
     - After launching this Jenkins server, attach a tag as **Key=Application, value=jenkins**
 
 3) ###### Slack 
-    - **Join the slack channel https://join.slack.com/t/slack-wcl4742/shared_invite/zt-1kid01o3n-W47OUTHBd2ZZpSzGnow1Wg**
-    - **Join into the channel "#team-devops"**
+    - **Join the slack channel https://join.slack.com/t/devopsgurus-workspace/shared_invite/zt-2cfgmzh5f-H_YS94tv8PzmYX_YAVzLhA**
+    - **Join into the channel "#solavistech-cicd-project"**
 
 ### Jenkins setup
 1) #### Access Jenkins
@@ -73,11 +73,11 @@ Prerequisites
     1)  #### Configure slack credentials for the pipeline to post alerts on slack channel:
         - Click on Manage Jenkins --> System
         - Go to section Slack
-        - Workspace: **devopsfullyau-r0x2686** (if not working try with name of workspace devops-fully-automated)
+        - Workspace: **DevOpsGurus** (if not working try with name of workspace devopsgurus-workspace)
         - Credentials: Click on Add button to add new credentials
             - Slack secret token (slack-token)
             - Kind: Secret text            
-            - Secret: 3jrfd3GjdMac0dgcxJwcOgQU
+            - Secret: rBwO4Ymv4tvz2oDL8XWnRawW
             - ID: slack-token
             - Description: slack-token
             - Click on Create        
@@ -86,14 +86,14 @@ Prerequisites
 ### GitHub webhook
 
 1) #### Add jenkins webhook to github
-    - Access your repo **devops-fully-automated-infra** on github
+    - Access your repo **devopsgurus-workspace** on github
     - Goto Settings --> Webhooks --> Click on Add webhook 
     - Payload URL: **htpp://REPLACE-JENKINS-SERVER-PUBLIC-IP:8080/github-webhook/**             (Note: The IP should be public as GitHub is outside of the AWS VPC where Jenkins server is hosted)
     - Click on Add webhook
 
 2) #### Configure on the Jenkins side to pull based on the event
     - Access your jenkins server, pipeline **app-infra-pipeline**
-    - Once pipeline is accessed --> Click on Configure --> In the General section --> **Select GitHub project checkbox** and fill your repo URL of the project devops-fully-automated.
+    - Once pipeline is accessed --> Click on Configure --> In the General section --> **Select GitHub project checkbox** and fill your repo URL of the project solavistech-cicd-project.
     - Scroll down --> In the Build Triggers section -->  **Select GitHub hook trigger for GITScm polling checkbox**
 
 Once both the above steps are done click on Save.
@@ -102,7 +102,7 @@ Once both the above steps are done click on Save.
 ### Codebase setup
 
 1) #### For checking the checkov scan uncomment lines 74-78 in ec2/ec2.tf file
-    - Go back to your local, open your "devops-fully-automated" project on VSCODE
+    - Go back to your local, open your "devopsgurus-workspace" project on VSCODE
     - Open "ec2.tf file" uncomment lines   
     - Save the changes in both files
     - Finally push changes to repo
@@ -117,7 +117,7 @@ Once both the above steps are done click on Save.
 ### Destroy the infra
 
 1) #### Once the flow is observed, lets destroy the infra with same code
-    - Go back to your local, open your "devops-fully-automated" project on VSCODE
+    - Go back to your local, open your "devopsgurus-workspace" project on VSCODE
     - Open "Jenkinsfile" comment lines 59, 76-82 & uncomment lines 61, 84-90
     - Save the changes in both files
     - Finally push changes to repo
