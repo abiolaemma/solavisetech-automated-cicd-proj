@@ -1,8 +1,8 @@
 # devops-fully-automated-infra
 
 Fully automated and secured Terraform infra pipeline
+Testing the webhook.....
 
-Testing teh webhook.....
 Prerequisite
 1. AWS CLI
 2. Install Terraform
