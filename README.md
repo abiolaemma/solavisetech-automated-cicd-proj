@@ -22,7 +22,7 @@ Prerequisites
 2) ###### Jenkins
     - Create an **Amazon Linux 2 VM** instance and call it "Jenkins"
     - Instance type: t2.large
-    - Security Group (Open): 8080, 9100 and 22 to 0.0.0.0/0
+    - Security Group (Open): 8080 and 22 to 0.0.0.0/0
     - Key pair: Select or create a new keypair
     - **Attach Jenkins server with IAM role having "AdministratorAccess"**
     - User data (Copy the following user data): https://github.com/cvamsikrishna11/devops-fully-automated/blob/installations/jenkins-maven-ansible-setup.sh
@@ -77,7 +77,7 @@ Prerequisites
         - Credentials: Click on Add button to add new credentials
             - Slack secret token (slack-token)
             - Kind: Secret text            
-            - Secret: rBwO4Ymv4tvz2oDL8XWnRawW
+            - Secret: 3vxIYcFVKWkKS6mz22a6LzJu
             - ID: slack-token
             - Description: slack-token
             - Click on Create        
