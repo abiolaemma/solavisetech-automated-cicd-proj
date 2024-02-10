@@ -50,7 +50,7 @@ pipeline {
         } 
                 
         
-        stage('Checkov scan') {
+        stage('Checkov SASTscan') {
             steps {
                 
                 sh """                
