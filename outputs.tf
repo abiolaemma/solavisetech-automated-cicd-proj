@@ -32,6 +32,3 @@ output "prod_instance_ip" {
   value = module.ec2_prod.instance_public_ip
 }
 
-output "nexus_instance_id" {
-  value = module.ec2_nexus.instance_id
-}
