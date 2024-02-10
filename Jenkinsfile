@@ -10,7 +10,7 @@ pipeline {
         stage('Git checkout') {
             steps {
                 echo 'Cloning project codebase...'
-                git branch: 'main', url: 'https://github.com/abiolaemma/solavisetech-automated-cicd-proj.git'
+                git branch: 'main', url: 'https://github.com/abiolaemma/solavisetech-automated-cicd-proj'
                 sh 'ls'
             }
         }
@@ -80,7 +80,7 @@ pipeline {
                
             }
         }
-        
+                
         //  stage('Terraform destroy') {
         //      steps {
         //         echo 'Terraform destroy...'                             
